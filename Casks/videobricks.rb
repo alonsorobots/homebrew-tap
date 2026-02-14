@@ -1,6 +1,6 @@
 cask "videobricks" do
   version "1.0.1"
-  sha256 "d8c9e7616456f405b9c06b42c0c82f7b8107bc711810d4b4bfbbe501c957c07a"
+  sha256 "adc5c572302515c768c774cbf8f1f3966e05d022e04519d297b527b4ff1cdbbd"
 
   url "https://github.com/alonsorobots/VideoBricks/releases/download/v#{version}/VideoBricks_#{version}_aarch64.dmg"
   name "VideoBricks"
@@ -10,6 +10,11 @@ cask "videobricks" do
   depends_on formula: "ffmpeg"
 
   app "VideoBricks.app"
+
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-cr", "#{appdir}/VideoBricks.app"]
+  end
 
   zap trash: [
     "~/Library/Application Support/com.alonsorobots.videobricks",
