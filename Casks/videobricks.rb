@@ -1,6 +1,6 @@
 cask "videobricks" do
   version "1.0.1"
-  sha256 "PLACEHOLDER"
+  sha256 "b15bea3ca01be665bb6dba85151da27e27e9695b9fb25487453d9ff9fb3eccaf"
 
   url "https://github.com/alonsorobots/VideoBricks/releases/download/v#{version}/VideoBricks_#{version}_aarch64.dmg"
   name "VideoBricks"
