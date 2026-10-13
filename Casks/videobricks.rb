@@ -1,16 +1,14 @@
 cask "videobricks" do
   arch arm: "aarch64", intel: "x64_x86_64"
 
-  version "1.0.5"
-  sha256 arm:   "403c3a650891b2838eae15abbf1325de0f9603f65a3c8639c3ef48541f98529e",
-         intel: "809499b1c633791932ad24717e357600a649010f405a8e10811b76c3cf1dba87"
+  version "1.0.6"
+  sha256 arm:   "b64fa70e9abecc4878b6718c0a12bac8894e6eccb2cbc96db8ca8670716f9241",
+         intel: "e4d8634ec6d0a8ea8be90363a56fbbe38b78241158af322a12ac997ba89fd240"
 
   url "https://github.com/alonsorobots/VideoBricks/releases/download/v#{version}/VideoBricks_#{version}_#{arch}.dmg"
   name "VideoBricks"
   desc "Convert videos to high-quality GIFs and MP4s"
   homepage "https://github.com/alonsorobots/VideoBricks"
-
-  depends_on formula: "ffmpeg"
 
   app "VideoBricks.app"
 
